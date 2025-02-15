@@ -2,7 +2,7 @@
 
 namespace DevelopmentChallenge.Data.Classes
 {
-    public class TrianguloEquilatero : FormaBase
+    public class TrianguloEquilatero : FormaGeometrica
     {
         public TrianguloEquilatero(decimal lado)
         {

@@ -12,7 +12,7 @@ namespace DevelopmentChallenge.Data.Tests
         {
             var reporte = new Reporte("es-AR");
             Assert.AreEqual("<h1>Lista vacía de formas!</h1>",
-                reporte.Imprimir(new List<FormaBase>()));
+                reporte.Imprimir(new List<FormaGeometrica>()));
         }
 
 
@@ -21,7 +21,7 @@ namespace DevelopmentChallenge.Data.Tests
         {
             var reporte = new Reporte("en-US");
             Assert.AreEqual("<h1>Empty list of shapes!</h1>",
-                reporte.Imprimir(new List<FormaBase>()));
+                reporte.Imprimir(new List<FormaGeometrica>()));
         }
 
 
@@ -29,7 +29,7 @@ namespace DevelopmentChallenge.Data.Tests
         public void TestResumenListaConUnCuadrado()
         {
             var reporte = new Reporte("es-AR");
-            var lista = new List<FormaBase> { new Cuadrado(5) };
+            var lista = new List<FormaGeometrica> { new Cuadrado(5) };
 
             var resumen = reporte.Imprimir(lista);
 
@@ -40,7 +40,7 @@ namespace DevelopmentChallenge.Data.Tests
         [TestCase]
         public void TestResumenListaConMasCuadrados()
         {
-            var lista = new List<FormaBase>
+            var lista = new List<FormaGeometrica>
                 {
                     new Cuadrado(5),
                     new Cuadrado(1),
@@ -55,7 +55,7 @@ namespace DevelopmentChallenge.Data.Tests
         [TestCase]
         public void TestResumenListaConMasTipos()
         {
-            var formas = new List<FormaBase>
+            var formas = new List<FormaGeometrica>
             {
                 new Cuadrado(5),
                 new Circulo(3m),
@@ -77,7 +77,7 @@ namespace DevelopmentChallenge.Data.Tests
         [TestCase]
         public void TestResumenListaConMasTiposEnCastellano()
         {
-            var formas = new List<FormaBase>
+            var formas = new List<FormaGeometrica>
             {
                 new Cuadrado(5m),
                 new Circulo(3m),
@@ -99,7 +99,7 @@ namespace DevelopmentChallenge.Data.Tests
         public void TestResumenListaConUnRectangulo()
         {
             var reporte = new Reporte("it-IT");
-            var lista = new List<FormaBase> { new Rectangulo(2, 4) };
+            var lista = new List<FormaGeometrica> { new Rectangulo(2, 4) };
 
             var resumen = reporte.Imprimir(lista);
 
@@ -110,7 +110,7 @@ namespace DevelopmentChallenge.Data.Tests
         public void TestResumenListaConUnTrapecio()
         {
             var reporte = new Reporte("it-IT");
-            var lista = new List<FormaBase> { new Trapecio(2, 4, 5, 2) };
+            var lista = new List<FormaGeometrica> { new Trapecio(2, 4, 5, 2) };
 
             var resumen = reporte.Imprimir(lista);
 

@@ -2,7 +2,7 @@
 
 namespace DevelopmentChallenge.Data.Classes
 {
-    public class Circulo : FormaBase
+    public class Circulo : FormaGeometrica
     {
         public Circulo(decimal diametro)
         {

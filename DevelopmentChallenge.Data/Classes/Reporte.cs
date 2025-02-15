@@ -24,7 +24,7 @@ namespace DevelopmentChallenge.Data.Classes
             }
 
         }
-        public string Imprimir(List<FormaBase> formas)
+        public string Imprimir(List<FormaGeometrica> formas)
         {
             var sb = new StringBuilder();
 

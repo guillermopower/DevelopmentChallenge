@@ -46,7 +46,7 @@
   <ItemGroup>
     <Compile Include="Classes\Circulo.cs" />
     <Compile Include="Classes\Cuadrado.cs" />
-    <Compile Include="Classes\FormaBase.cs" />
+    <Compile Include="Classes\FormaGeometrica.cs" />
     <Compile Include="Classes\Idioma.cs" />
     <Compile Include="Classes\IFormaGeometrica.cs" />
     <Compile Include="Classes\IIdioma.cs" />

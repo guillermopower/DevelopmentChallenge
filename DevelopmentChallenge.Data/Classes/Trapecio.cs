@@ -2,7 +2,7 @@
 
 namespace DevelopmentChallenge.Data.Classes
 {
-    public class Trapecio : FormaBase
+    public class Trapecio : FormaGeometrica
     {
         protected decimal BaseMenor { get; set; }
         protected decimal BaseMayor { get; set; }

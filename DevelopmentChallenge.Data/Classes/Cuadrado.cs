@@ -1,6 +1,6 @@
 ﻿namespace DevelopmentChallenge.Data.Classes
 {
-    public class Cuadrado : FormaBase
+    public class Cuadrado : FormaGeometrica
     {
         public Cuadrado(decimal lado)
         {

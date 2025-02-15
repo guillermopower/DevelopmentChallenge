@@ -1,6 +1,6 @@
 ﻿namespace DevelopmentChallenge.Data.Classes
 {
-    public class Rectangulo : FormaBase
+    public class Rectangulo : FormaGeometrica
     {
         protected decimal LadoBase { get; set; }
         public Rectangulo(decimal ladoBase, decimal ladoAltura)
