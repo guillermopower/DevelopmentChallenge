@@ -44,7 +44,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\FormaGeometrica.cs" />
+    <Compile Include="Classes\Circulo.cs" />
+    <Compile Include="Classes\Cuadrado.cs" />
+    <Compile Include="Classes\FormaBase.cs" />
+    <Compile Include="Classes\Idioma.cs" />
+    <Compile Include="Classes\IFormaGeometrica.cs" />
+    <Compile Include="Classes\IIdioma.cs" />
+    <Compile Include="Classes\IReporte.cs" />
+    <Compile Include="Classes\Palabra.cs" />
+    <Compile Include="Classes\Rectangulo.cs" />
+    <Compile Include="Classes\Reporte.cs" />
+    <Compile Include="Classes\Total.cs" />
+    <Compile Include="Classes\Trapecio.cs" />
+    <Compile Include="Classes\TrianguloEquilatero.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
