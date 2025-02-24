@@ -1,13 +1,14 @@
 ﻿using DevelopmentChallenge.Data.Classes;
-using NUnit.Framework;
 using System.Collections.Generic;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DevelopmentChallenge.Data.Tests
 {
-    [TestFixture]
+    [TestClass]
     public class DataTests
     {
-        [TestCase]
+
+        [TestMethod]
         public void TestResumenListaVacia()
         {
             var reporte = new Reporte("es-AR");
@@ -16,7 +17,7 @@ namespace DevelopmentChallenge.Data.Tests
         }
 
 
-        [TestCase]
+        [TestMethod]
         public void TestResumenListaVaciaFormasEnIngles()
         {
             var reporte = new Reporte("en-US");
@@ -25,7 +26,7 @@ namespace DevelopmentChallenge.Data.Tests
         }
 
 
-        [TestCase]
+        [TestMethod]
         public void TestResumenListaConUnCuadrado()
         {
             var reporte = new Reporte("es-AR");
@@ -37,7 +38,7 @@ namespace DevelopmentChallenge.Data.Tests
         }
 
 
-        [TestCase]
+        [TestMethod]
         public void TestResumenListaConMasCuadrados()
         {
             var lista = new List<FormaGeometrica>
@@ -52,7 +53,7 @@ namespace DevelopmentChallenge.Data.Tests
             Assert.AreEqual("<h1>Shapes report</h1>3 Squares | Area 35 | Perimeter 36 <br/>TOTAL:<br/>3 shapes Perimeter 36 Area 35", resumen);
         }
 
-        [TestCase]
+        [TestMethod]
         public void TestResumenListaConMasTipos()
         {
             var formas = new List<FormaGeometrica>
@@ -74,7 +75,7 @@ namespace DevelopmentChallenge.Data.Tests
                 resumen);
         }
 
-        [TestCase]
+        [TestMethod]
         public void TestResumenListaConMasTiposEnCastellano()
         {
             var formas = new List<FormaGeometrica>
@@ -95,7 +96,7 @@ namespace DevelopmentChallenge.Data.Tests
                 resumen);
         }
 
-        [TestCase]
+        [TestMethod]
         public void TestResumenListaConUnRectangulo()
         {
             var reporte = new Reporte("it-IT");
@@ -106,7 +107,7 @@ namespace DevelopmentChallenge.Data.Tests
             Assert.AreEqual("<h1>Rapporto sul modulo</h1>1 Rettangolo | Area 8 | Perimetro 12 <br/>TOTAL:<br/>1 forme Perimetro 12 Superficie 8", resumen);
         }
 
-        [TestCase]
+        [TestMethod]
         public void TestResumenListaConUnTrapecio()
         {
             var reporte = new Reporte("it-IT");
