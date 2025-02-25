@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 
 namespace DevelopmentChallenge.Data.Classes
 {
@@ -15,6 +16,9 @@ namespace DevelopmentChallenge.Data.Classes
         {
             try
             {
+                CultureInfo ci = new CultureInfo(cultura);
+                Thread.CurrentThread.CurrentCulture = ci;
+                Thread.CurrentThread.CurrentUICulture = ci;
                 this.idioma = new Idioma(new CultureInfo(cultura));
             }
             catch (Exception ex)
@@ -30,14 +34,14 @@ namespace DevelopmentChallenge.Data.Classes
 
             if (!formas.Any())
             {
-                sb.Append("<h1>" + idioma.Traducir("listavacia") + "</h1>");
+                sb.Append("<h1>" + Resources.Resource.listavacia + "</h1>");
             }
             else
             {
                 // Hay por lo menos una forma
                 // HEADER
 
-                sb.Append("<h1>" + idioma.Traducir("listanovacia") + "</h1>");
+                sb.Append("<h1>" + Resources.Resource.listanovacia + "</h1>");
 
                 for (var i = 0; i < formas.Count; i++)
                 {
@@ -64,10 +68,10 @@ namespace DevelopmentChallenge.Data.Classes
 
                 // FOOTER
                 sb.Append("TOTAL:<br/>");
-                sb.Append(this.Totales.Sum(x => x.Cantidad) + " " + idioma.Traducir("forma", true).ToLower());
+                sb.Append(this.Totales.Sum(x => x.Cantidad) + " " + Resources.Resource.forma.ToLower());
                 sb.Append(" ");
-                sb.Append(idioma.Traducir("perimetro") + " " + (this.Totales.Sum(x => x.SumatoriaPerimetro)).ToString(idioma.FormatoDecimales) + " ").Replace('.', ',');
-                sb.Append(idioma.Traducir("area") + " " + (this.Totales.Sum(x => x.SumatoriaArea).ToString(idioma.FormatoDecimales)).Replace('.', ','));
+                sb.Append(Resources.Resource.perimetro + " " + (this.Totales.Sum(x => x.SumatoriaPerimetro)).ToString("#.##") + " ").Replace('.', ',');
+                sb.Append(Resources.Resource.area + " " + (this.Totales.Sum(x => x.SumatoriaArea).ToString("#.##")).Replace('.', ','));
             }
 
             return sb.ToString();
@@ -77,8 +81,8 @@ namespace DevelopmentChallenge.Data.Classes
         {
             if (cantidad > 0)
             {
-                return (cantidad.ToString() + " " + idioma.Traducir(tipo.ToLower(), cantidad > 1) + " | Area " + area.ToString(idioma.FormatoDecimales)
-                    + " | " + idioma.Traducir("perimetro") + " " + perimetro.ToString(idioma.FormatoDecimales) + " <br/>").Replace('.', ',');
+                return (cantidad.ToString() + " " + idioma.Traducir(tipo.ToLower()) + " | "  + Resources.Resource.area + " " + area.ToString("#.##")
+                    + " | " + Resources.Resource.perimetro + " " + perimetro.ToString("#.##") + " <br/>").Replace('.', ',');
             }
 
             return string.Empty;

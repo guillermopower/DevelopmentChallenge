@@ -2,6 +2,6 @@
 {
     internal interface IIdioma
     {
-        string Traducir(string palabra, bool plural = false);
+        string Traducir(string palabra);
     }
 }

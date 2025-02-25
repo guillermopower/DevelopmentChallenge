@@ -34,7 +34,7 @@ namespace DevelopmentChallenge.Data.Tests
 
             var resumen = reporte.Imprimir(lista);
 
-            Assert.AreEqual("<h1>Reporte de Formas</h1>1 Cuadrado | Area 25 | Perimetro 20 <br/>TOTAL:<br/>1 formas Perimetro 20 Area 25", resumen);
+            Assert.AreEqual("<h1>Reporte de Formas</h1>1 Cuadrado | Area 25 | Perímetro 20 <br/>TOTAL:<br/>1 forma Perímetro 20 Area 25", resumen);
         }
 
 
@@ -50,7 +50,7 @@ namespace DevelopmentChallenge.Data.Tests
 
             var resumen = new Reporte("en-US").Imprimir(lista);
 
-            Assert.AreEqual("<h1>Shapes report</h1>3 Squares | Area 35 | Perimeter 36 <br/>TOTAL:<br/>3 shapes Perimeter 36 Area 35", resumen);
+            Assert.AreEqual("<h1>Shapes report</h1>3 Squad | Area 35 | Perimeter 36 <br/>TOTAL:<br/>3 shape Perimeter 36 Area 35", resumen);
         }
 
         [TestMethod]
@@ -71,7 +71,7 @@ namespace DevelopmentChallenge.Data.Tests
             var resumen = new Reporte("en-US").Imprimir(formas);
 
             Assert.AreEqual(
-                "<h1>Shapes report</h1>2 Squares | Area 29 | Perimeter 28 <br/>2 Circles | Area 13,01 | Perimeter 18,06 <br/>3 Triangles | Area 49,64 | Perimeter 51,6 <br/>TOTAL:<br/>7 shapes Perimeter 97,66 Area 91,65",
+                "<h1>Shapes report</h1>2 Squad | Area 29 | Perimeter 28 <br/>2 Circle | Area 13,01 | Perimeter 18,06 <br/>3 Triangle | Area 49,64 | Perimeter 51,6 <br/>TOTAL:<br/>7 shape Perimeter 97,66 Area 91,65",
                 resumen);
         }
 
@@ -92,7 +92,7 @@ namespace DevelopmentChallenge.Data.Tests
             var resumen = new Reporte("es-AR").Imprimir(formas);
 
             Assert.AreEqual(
-                "<h1>Reporte de Formas</h1>2 Cuadrados | Area 29 | Perimetro 28 <br/>2 Círculos | Area 13,01 | Perimetro 18,06 <br/>3 Triángulos | Area 49,64 | Perimetro 51,6 <br/>TOTAL:<br/>7 formas Perimetro 97,66 Area 91,65",
+                "<h1>Reporte de Formas</h1>2 Cuadrado | Area 29 | Perímetro 28 <br/>2 Círculo | Area 13,01 | Perímetro 18,06 <br/>3 Triángulo Equilátero | Area 49,64 | Perímetro 51,6 <br/>TOTAL:<br/>7 forma Perímetro 97,66 Area 91,65",
                 resumen);
         }
 
@@ -104,7 +104,7 @@ namespace DevelopmentChallenge.Data.Tests
 
             var resumen = reporte.Imprimir(lista);
 
-            Assert.AreEqual("<h1>Rapporto sul modulo</h1>1 Rettangolo | Area 8 | Perimetro 12 <br/>TOTAL:<br/>1 forme Perimetro 12 Superficie 8", resumen);
+            Assert.AreEqual("<h1>Rapporto sul modulo</h1>1 Rettangolo | Area 8 | Perimetro 12 <br/>TOTAL:<br/>1 forme Perimetro 12 Area 8", resumen);
         }
 
         [TestMethod]
@@ -115,7 +115,7 @@ namespace DevelopmentChallenge.Data.Tests
 
             var resumen = reporte.Imprimir(lista);
 
-            Assert.AreEqual("<h1>Rapporto sul modulo</h1>1 Trapecio | Area 20 | Perimetro 13 <br/>TOTAL:<br/>1 forme Perimetro 13 Superficie 20", resumen);
+            Assert.AreEqual("<h1>Rapporto sul modulo</h1>1 Trapecio | Area 20 | Perimetro 13 <br/>TOTAL:<br/>1 forme Perimetro 13 Area 20", resumen);
         }
     }
 }
